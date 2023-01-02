@@ -6,7 +6,7 @@ This is a Python project that generates a digest of popular Mastodon posts from 
 
 ## Run
 
-You can run in [Docker](#docker) or in a [local python environment](#local). But first, set up your environment:
+You can run in [Docker](#docker), in a [local python environment](#local), or from a [nix flake](#nix). But first, set up your environment:
 
 Before you can run the tool locally, you need to copy [.env.example](./.env.example) to `.env` (which is ignored by git) and fill in the relevant environment variables:
 
@@ -73,6 +73,14 @@ python run.py
 
 Through either method, the digest is written to `render/index.html` by default. You can then view it with the browser of your choice.
 
+### Nix
+You can also run `mastodon_digest` directly as a [nix](http://nixos.org) [flake](https://nixos.org/manual/nix/unstable/command-ref/new-cli/nix3-flake.html). Create a `.env` file as described above, then, in the same directory as that `.env` file, run,
+
+```sh
+nix run github:acowley/mastodon_digest/nix -- -o $PWD
+```
+
+to create an `index.html` in that same directory.
 
 ## Command arguments
 
