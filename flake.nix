@@ -18,8 +18,8 @@
         src = pkgs.fetchFromGitHub {
           owner = "hodgesmr";
           repo = "mastodon_digest";
-          rev = "07d8827a79086263f0e0f161faa2c12e405b2929";
-          hash = "sha256-iFOvexzj5UQve67nvNcGthrvVbL5yQbYyUIXlaRYlug=";
+          rev = "6574e63a9e319f15728278753d9632c5e7e821ee";
+          hash = "sha256-wTAf+hxdE2Ki5QavDy/FMbnHcHI7FuLycf6aCrX81fA=";
         };
         pkg = pkgs.writeShellApplication {
           name = "mastodon_digest";
